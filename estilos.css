@@ -227,28 +227,12 @@ font-size: 50px;
 background-image: url(Multimedia/Fondopagina.jpg);
 }
 
-.imagenes_local{
-    display: inline-block;
-    width: 25%;
-    height: 25%;
-}
 
+/* informacion */
 .tabla_sobre_nosotros{
     font-size: 30px;
     width: 100%;
 }
-.promo_3x2{
-    width: 700px;
-    height: 500px;
-}
-
-
-.formularios{
-    padding: 25px;
-    text-align: center;
-    margin: 40px;
-    width: 700px;
-}  
 
 footer{
     background-color: black;
@@ -265,12 +249,13 @@ color: orange;
 font-size: 50px;
 letter-spacing: 30px ;
 }
-
+/* informacion */
 .section_indix{
     background-image: url(Multimedia/Fondopagina.jpg);
     border:rgb(0, 0, 0) solid;
     padding: 50px;
 }
+/* informacion */
 .redes_sociales{
     font-size: 50px;
 }
@@ -283,7 +268,7 @@ letter-spacing: 30px ;
     font-size: 40px;
     background-color: rgb(184, 162, 204);
 }
-
+/* revisar y borrar */
 .imagenes_local_info{
     width: 450px;
     height: 450px;
@@ -293,30 +278,33 @@ letter-spacing: 30px ;
 font-size: 40px;
 text-align: center;
 }
-
+/* revisar y borrar */
 .input_presupuesto{
     font-size: 35px;
     height: 60px;
     width: 600px;
 }
+/* revisar y borrar */
 .boton_presupuesto{
     font-size: 35px;
     height: 80px;
     width: 300px;
 }
+/* revisar y borrar */
 .file{
     font-size: 30px;
     height: 80px;
     width: 600px;
 }
 
+/* informacion */
 .tamaño_tarjetas_presupuesto{
     width: 378px;
     height: 378px;
 }
 
 .img-presupuesto{
-    height: 1000px;
+    height: 650px;
     width: 80%;
     border: 2px solid black;
 }
