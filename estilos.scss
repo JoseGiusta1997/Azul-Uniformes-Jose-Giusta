@@ -20,6 +20,7 @@ $fontgrande:50px;
 $fontmediana:40px;
 $fontchica:30px;
 $colortextos:rgb(29, 121, 192);
+$colorFondoyborde: rgb(213, 235, 227);
 
 *{
     margin: 0;
@@ -41,37 +42,40 @@ $colortextos:rgb(29, 121, 192);
 .navbar{
     height: 120px;
     background-image: url(Multimedia/Fondopagina.jpg);
-    box-shadow: 0 0 6px greenyellow !important;
-}
-
-.navbar ul li{
-    display: inline-block;
-    text-shadow: 0 0 1px rgb(9, 8, 8) ; 
-    font-size: $fontchica;
-    padding: 20px;
+    box-shadow: 0 0 6px $colorFondoyborde !important;
+    ul{
+        li{
+            display: inline-block;
+            text-shadow: 0 0 1px rgb(9, 8, 8) ; 
+            font-size: $fontchica;
+            padding: 20px;
+        }
+    }
 }
 
 .nav-link{
     color: $colortextos !important;
 }
-.nav-item a:hover{
-    color: rgb(247, 247, 253) !important;
+.nav-item{
+    a:hover{
+        color: rgb(0, 0, 0) !important;
+    }
 }
 
 .Jumbotron{
     width: 100%;
     height: 150px;
-    background-image: url(Multimedia/fondo1.jpg);
+    background-image: url(Multimedia/azulfondo.png);
     background-size: cover;
     background-position: center;
-}
-.Jumbotron h1{
-    font-family: $fondotitulos;
-    color: blue;
-    width: 100%;
-    border: 5px solid rgb(0, 0, 0);
-    background-image:url(Multimedia/Fondopagina.jpg);
-    text-align: center;
+    h1{
+        font-family: $fondotitulos;
+        color: blue;
+        width: 100%;
+        border: 5px solid rgb(0, 0, 0);
+        background-image:url(Multimedia/Fondopagina.jpg);
+        text-align: center;
+    }
 }
 h2{
     font-family: $fondotitulos;
@@ -79,7 +83,9 @@ h2{
     color: $colortextos !important; 
     text-shadow: 0 0 1px rgb(9, 8, 8) ; 
     font-size: $fontchica;
-    padding: 20px;
+    padding: 0px;
+    margin: 0;
+    border: 1px solid black;
     background-image: url(Multimedia/Fondopagina.jpg);
 }
 
@@ -92,7 +98,7 @@ h2{
 }
 
 article{
-    background-color: aqua;
+    background-color: $colorFondoyborde;
     border: 2px solid black;
     height: 200px;
 }
@@ -107,6 +113,8 @@ article{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* Formato menu desplegable */
@@ -121,16 +129,22 @@ article{
 
 .gridClientes{
     height: 600px;
-    background-color: rgb(231, 64, 64);
+    background-color: $colorFondoyborde;
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
     grid-template-rows: repeat(3, 200px);
 }
 .item{
     border: solid 1px black;
-    background-size: cover;
+    background-size: 80%;
     background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.9s;
 }
+.item:hover{
+    background-size: 130%;
+}
+
 
 .item1{
     grid-column: 1/3;
@@ -214,47 +228,68 @@ article{
     }
 }
 
+.item9{
+    background-size: 80%;
+}
+
+.item9:hover{
+    background-size: 130%;
+}
+
+
+
 h1{
     color:rgb(10, 27, 157);
     margin-bottom: 1px;
 }
-.call p{
-    margin-bottom: 20px;
-}
-.call a{
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    padding: 1px 20px;
-    border: 2px solid rgb(248, 248, 248);
-}
 
-.call a:hover{
-    background-color: rgb(247, 85, 57);
-}
-
-#informacion{
-    height: calc(100vh - 80px);
-    background-image: url(Multimedia/Empresa1.jpg);
-    background-size:cover;
-}
-
-.Presupuestos{
-color: black;
-text-align: center;
-font-size: $fontgrande;
-background-image: url(Multimedia/Fondopagina.jpg);
+.call {
+    p{
+        margin-bottom: 20px;
+    }
+    a{
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        padding: 1px 20px;
+        border: 2px solid rgb(248, 248, 248);
+    }
+    a:hover{
+        background-color: rgb(247, 85, 57);
+    }
 }
 
 .row{
     background-color: rgb(213, 235, 227);
 }
 
-/* informacion */
-.tabla_sobre_nosotros{
-    font-size: $fontchica;
-    width: 100%;
+/* Lista de talles */
+.tamaño_p_info{
+    font-size: $fontmediana;
+    background-color: rgb(184, 162, 204);
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
+
+/* información */
+.tamaño_tarjetas_presupuesto{
+    width: 378px;
+    height: 378px;
+}
+/* Inicio Carousel información y presupuesto */
+.img-presupuesto{
+    height: 600px;
+    width: 80%;
+    border: 2px solid black;
+}
+.carousel-caption{
+    color: rgb(255, 255, 255);
+    background-color: rgb(57, 79, 72);
+}
+/* Fin carousel información y presupuesto */
+
+/* Inicio Footer */
 
 footer{
     background-color: black;
@@ -262,76 +297,15 @@ footer{
     text-align: center;
     font-size: $fontchica;
     padding: 20px ;
+    p{
+        margin-bottom: 20px;
+    }
 }
-footer p{
-    margin-bottom: 20px;
+footer {
+    i{
+        color: orange;
+        font-size: $fontgrande;
+        letter-spacing: 30px ;
+    }
 }
-footer i{
-color: orange;
-font-size: $fontgrande;
-letter-spacing: 30px ;
-}
-/* informacion */
-.section_indix{
-    background-image: url(Multimedia/Fondopagina.jpg);
-    border:rgb(0, 0, 0) solid;
-    padding: 50px;
-}
-/* informacion */
-.redes_sociales{
-    font-size: $fontgrande;
-}
-
-.tamaño_tarjetas{
-    width: 480px;
-    height: 480px;
-}
-.tamaño_p_info{
-    font-size: $fontmediana;
-    background-color: rgb(184, 162, 204);
-}
-/* revisar y borrar */
-.imagenes_local_info{
-    width: 450px;
-    height: 450px;
-}
-
-.h_info{
-font-size: $fontmediana;
-text-align: center;
-}
-/* revisar y borrar */
-.input_presupuesto{
-    font-size: $fontmediana;
-    height: 60px;
-    width: 600px;
-}
-/* revisar y borrar */
-.boton_presupuesto{
-    font-size: $fontmediana;
-    height: 80px;
-    width: 300px;
-}
-/* revisar y borrar */
-.file{
-    font-size: $fontchica;
-    height: 80px;
-    width: 600px;
-}
-
-/* informacion */
-.tamaño_tarjetas_presupuesto{
-    width: 378px;
-    height: 378px;
-}
-
-.img-presupuesto{
-    height: 650px;
-    width: 80%;
-    border: 2px solid black;
-}
-
-.carousel-caption{
-    color: rgb(255, 255, 255);
-    background-color: rgb(57, 79, 72);
-}
+/* Fin Footer */
