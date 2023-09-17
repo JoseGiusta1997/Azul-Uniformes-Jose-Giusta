@@ -30,8 +30,10 @@ $colorFondoyborde: rgb(213, 235, 227);
 }
 
 .logo{
-    width: 100px;
-    height: 100px;
+    width: 14vh;
+    height: 11vh;
+    // width: 100px;
+    // height: 100px;
     color:$colortextos;
     text-shadow: 0 0 1px rgb(9, 8, 8) ;
     text-align: right;
@@ -105,6 +107,10 @@ article{
 .img-fluid{
     border: 2px solid black;
     align-content: center;
+}
+
+.img-cliente:hover{
+    background-size: 130%;
 }
 
 .row{

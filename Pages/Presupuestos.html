@@ -31,7 +31,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html"> <img src="../Multimedia/azul.ico" alt="Logo empresa" class="logo"></a>
         <span class="logo"> Azul Uniformes </span>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" aria-label="collapse">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
@@ -46,7 +46,7 @@
               <a class="nav-link" href="Clientes.html">Clientes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Presupuestos</a>
+              <a class="nav-link" href="Presupuestos.html">Presupuestos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="lista-talles.html">Lista de talles</a>
@@ -64,8 +64,8 @@
   <div class="conteiner">
     <form class="row">
       <div class="col-md-4  m-1 col-sm-6">
-        <label for="nombreInput" class="form-label">Fecha de la consulta</label>
-        <input type="date" class="form-control" id="fechaInput" required>
+        <label for="FechaInput" class="form-label">Fecha de la consulta</label>
+        <input type="date" class="form-control" id="fechaInput" required aria-label="Fecha">
       </div>
       <div class="col-md-4 m-1 col-sm-6">
         <label for="nombreInput" class="form-label">Su nombre</label>
@@ -76,15 +76,15 @@
         <input type="email" class="form-control" id="correoInput" placeholder="EJ: Azuluniformes@hotmail.com" required>
       </div>
       <div class="col-md-4 m-1 col-sm-6">
-        <label for="nombreInput" class="form-label">Escuela/empresa a la que pertenece</label>
+        <label for="EscuelaInput" class="form-label">Escuela/empresa a la que pertenece</label>
         <input type="text" class="form-control" id="escuelaInput" placeholder="EJ: N°429 Comercial" required>
       </div>
       <div class="col-md-4 m-1 col-sm-6">
-        <label for="nombreInput" class="form-label">Tipo de prenda que desea consultar</label>
+        <label for="PrendaInput" class="form-label">Tipo de prenda que desea consultar</label>
         <input type="text" class="form-control" id="prendaInput" placeholder="EJ: Chomba talle L" required>
       </div>
       <div class="col-md-4 m-1 col-sm-6">
-        <label for="nombreInput" class="form-label">Cantidad</label>
+        <label for="CantidadInput" class="form-label">Cantidad</label>
         <input type="number" class="form-control" id="cantidadInput" placeholder="EJ: 2" required>
       </div>
       <div class="col-md-4 text-md-center m-2 col-sm-12 text-center">
@@ -106,15 +106,15 @@
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
     <!-- Indicators/dots -->
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-label="Ambo"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="chomba"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Uniforme"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="3" aria-label="Remera"></button>
     </div>
     <!-- The slideshow/carousel --> <!-- Los "mas información" conducirán a una galería de la marca" -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="../Multimedia/ambo3.jpg" alt="ambo" class="d-block w-100 img-presupuesto">
+        <img src="../Multimedia/ambo2.jpg" alt="ambo" class="d-block w-100 img-presupuesto">
         <div class="carousel-caption">
           <h3>Ambo</h3>
           <p><a href="#">Mas información</a></p>
@@ -143,10 +143,10 @@
       </div>
     </div>
     <!-- Left and right controls/icons -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev" aria-label="Flecha prev"> 
       <span class="carousel-control-prev-icon btn-dark"></span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next" aria-label="Flecha Nex">
       <span class="carousel-control-next-icon btn-dark"></span>
     </button>
   </div>
