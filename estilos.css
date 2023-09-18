@@ -10,15 +10,25 @@
 }
 
 .logo {
-  width: 14vh;
-  height: 11vh;
+  width: 100px;
+  height: 100px;
   color: rgb(29, 121, 192);
   text-shadow: 0 0 1px rgb(9, 8, 8);
-  text-align: right;
+  text-align: center;
   font-size: 40px;
   font-family: "Libre Franklin";
 }
 
+@media only screen and (min-width: 0) and (max-width: 400px) {
+  .logo {
+    font-size: 21px;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+  .logo {
+    font-size: 30px;
+  }
+}
 .navbar {
   height: 120px;
   background-image: url(Multimedia/Fondopagina.jpg);

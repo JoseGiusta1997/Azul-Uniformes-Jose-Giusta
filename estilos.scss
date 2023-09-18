@@ -19,6 +19,7 @@ $fontcuerpo: 'Farsan';
 $fontgrande:50px;
 $fontmediana:40px;
 $fontchica:30px;
+$fontexchica:21px;
 $colortextos:rgb(29, 121, 192);
 $colorFondoyborde: rgb(213, 235, 227);
 
@@ -30,16 +31,27 @@ $colorFondoyborde: rgb(213, 235, 227);
 }
 
 .logo{
-    width: 14vh;
-    height: 11vh;
-    // width: 100px;
-    // height: 100px;
+    width: 100px;
+    height: 100px;
     color:$colortextos;
     text-shadow: 0 0 1px rgb(9, 8, 8) ;
-    text-align: right;
+    text-align: center;
     font-size: $fontmediana;
     font-family: $fontlogo;
 }
+
+@media only screen and (min-width:0) and (max-width:400px){
+    .logo{
+        font-size: $fontexchica
+    }
+}
+
+@media only screen and (min-width:400px) and (max-width:768px){
+    .logo{
+        font-size: $fontchica
+    }
+}
+
 
 .navbar{
     height: 120px;
